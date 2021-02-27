@@ -22,8 +22,8 @@ Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
  
  ```
   Cells(k + 4, 1) = tickers(k)
-        Cells(k + 4, 2) = tickerVolumes(k)
-        Cells(k + 4, 3) = tickerEndingPrices(k) / tickerStartingPrices(k) - 1
+  Cells(k + 4, 2) = tickerVolumes(k)
+  Cells(k + 4, 3) = tickerEndingPrices(k) / tickerStartingPrices(k) - 1
  ```
  
  
