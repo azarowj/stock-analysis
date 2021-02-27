@@ -10,6 +10,22 @@ Results:
  
  The execution times of the original script and the refactored script were extreme. Attached is a screenshot showing the popup when the original code was run for 2017 [https://github.com/azarowj/stock-analysis/blob/main/Resources/Screen%20Shot%202021-02-26%20at%208.06.04%20PM.png] which can be compared to how quickly it ran with the refactored code for 2017 [https://github.com/azarowj/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png]. This is also evident with the speed for 2018 as seen next [https://github.com/azarowj/stock-analysis/blob/main/Resources/Screen%20Shot%202021-02-26%20at%208.06.17%20PM.png] [https://github.com/azarowj/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png]
  
+ Below is an example of code from the original analysis
+ 
+ ```
+Cells(4 + i, 1).Value = ticker
+Cells(4 + i, 2).Value = totalVolume
+Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+ ```
+ 
+ Below is an example of code from the refactored analysis
+ 
+ ```
+  Cells(k + 4, 1) = tickers(k)
+        Cells(k + 4, 2) = tickerVolumes(k)
+        Cells(k + 4, 3) = tickerEndingPrices(k) / tickerStartingPrices(k) - 1
+ ```
+ 
  
 Summary:
   1. One major advantage of refactoring the code is the speed that the program runs. One disadvantage is that the refactored code involves more code and therefore takes longer to      write. Combining the code of the stock analysis and the formatting also means that I only need to run one Macro instead of two in order to get the outcome that we are looking      for.
